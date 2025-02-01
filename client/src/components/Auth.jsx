@@ -21,7 +21,7 @@ const Auth = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { username, password, phoneNumber, avatarURL } = form;
-    const URL = "https://chat-more-server.vercel.app//auth";
+    const URL = "https://chat-more-server.vercel.app/auth";
     const {
       data: { token, userId, hashedPassword, fullName },
     } = await axios.post(`${URL}/${isSignup ? "signup" : "login"}`, {
